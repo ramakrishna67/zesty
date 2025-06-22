@@ -13,12 +13,7 @@ const port = process.env.PORT || 4000;
 
 // middlewares
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://zesty-backend-sd0l.onrender.com", // Allow deployed frontend
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // db connection
 connectDB();
